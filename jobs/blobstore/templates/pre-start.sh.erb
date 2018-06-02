@@ -9,15 +9,28 @@ function setup_blobstore_directories {
   local data_dir=/var/vcap/data/blobstore
   local store_tmp_dir=$store_dir/tmp/uploads
   local data_tmp_dir=$data_dir/tmp/uploads
+  local client_body_temp_dir=$store_dir/tmp/client_body_temp
   local nginx_webdav_dir=/var/vcap/packages/nginx_webdav
 
-  mkdir -p $run_dir
-  mkdir -p $log_dir
-  mkdir -p $store_dir
-  mkdir -p $store_tmp_dir
-  mkdir -p $data_dir
-  mkdir -p $data_tmp_dir
-  chown -R vcap:vcap $run_dir $log_dir $store_dir $store_tmp_dir $data_dir $data_tmp_dir $nginx_webdav_dir "${nginx_webdav_dir}/.."
+  mkdir -p \
+    $run_dir \
+    $log_dir \
+    $store_dir \
+    $store_tmp_dir \
+    $data_dir \
+    $data_tmp_dir \
+    $client_body_temp_dir
+    
+  chown -R vcap:vcap \
+    $run_dir \
+    $log_dir \
+    $store_dir \
+    $store_tmp_dir \
+    $data_dir \
+    $data_tmp_dir \
+    $client_body_temp_dir \
+    $nginx_webdav_dir \
+    "${nginx_webdav_dir}/.."
 }
 
 setup_blobstore_directories
