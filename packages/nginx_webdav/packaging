@@ -26,6 +26,7 @@ pushd nginx-1.13.12
     --prefix=${BOSH_INSTALL_TARGET} \
     --with-ld-opt="-L /usr/local/lib" \
     --with-cc-opt="-I /usr/local/include" \
+    --with-threads \
     --with-pcre=../pcre-8.42 \
     --with-http_dav_module \
     --with-http_secure_link_module \
