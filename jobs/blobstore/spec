@@ -74,8 +74,8 @@ properties:
     default: "5000m"
 
   blobstore.nginx_workers_per_core:
-    description: "Number of NGINX worker processes per CPU core"
-    default: 2
+    description: "Number of threads per core in the NGINX thread pool"
+    default: 16
 
   release_level_backup:
     description: "toggle to enable backups of the blobstore with bbr"
