@@ -76,6 +76,10 @@ properties:
   blobstore.nginx_workers_per_core:
     description: "Number of NGINX worker processes per CPU core"
     default: 2
+    
+  blobstore.custom_conf.http:
+    description: "Custom configuration directives for the http block in the nginx configuration"
+    default: ""
 
   release_level_backup:
     description: "toggle to enable backups of the blobstore with bbr"
