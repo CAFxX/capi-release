@@ -39,5 +39,7 @@ http {
 
   gzip                 off;
 
+  <%= p("blobstore.custom_conf.http").to_s.gsub("\n", "\n  ") %>
+
   include /var/vcap/jobs/blobstore/config/sites/*;
 }
