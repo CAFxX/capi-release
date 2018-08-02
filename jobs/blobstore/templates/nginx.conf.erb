@@ -7,7 +7,7 @@ pid       /var/vcap/data/blobstore/nginx.pid;
 pid       /var/vcap/sys/run/blobstore/nginx.pid;
 <% end %>
 
-worker_processes auto; # overridden on command line
+worker_processes auto;
 
 events {
   worker_connections 8192;
