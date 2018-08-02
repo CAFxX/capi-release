@@ -34,7 +34,7 @@ http {
 
   sendfile            on;       # use sendfile
   sendfile_max_chunk  1M;       # make sure not to block on fast clients reading large files
-  aio                 threads;  # run sendfile in the default thread pool (32 threads)
+  aio                 threads;  # run sendfile in the default thread pool
   read_ahead          1;        # use POSIX_FADV_SEQUENTIAL on files over 128KB 
   tcp_nopush          on;
   tcp_nodelay         on;
